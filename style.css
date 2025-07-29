@@ -5,7 +5,7 @@
 #container{
     background-color: #FCFFC1;
     border: 2px solid black;
-    height: 100vh;
+    height: 100%;
     margin: 0 auto;
     text-align: center;
 }
