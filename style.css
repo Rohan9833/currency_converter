@@ -1,0 +1,83 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+#container{
+    background-color: #FCFFC1;
+    border: 2px solid black;
+    height: 100vh;
+    margin: 0 auto;
+    text-align: center;
+}
+#yourDiv{
+    vertical-align: top;
+    display: inline-block;
+    height: 300px;
+    width: 300px;
+    border: 2px solid black;
+    background-color: aliceblue;
+    margin: 2rem;
+    margin-right: 5rem;
+
+}
+#outputDiv{
+    vertical-align: top;
+    display: inline-block;
+    height: 300px;
+    width: 300px;
+    border: 2px solid black;
+    background-color: aliceblue;
+    margin: 2rem;
+    margin-left: 5rem;
+}
+#convert{
+    border-radius: 3rem;
+    line-height: 30px;
+    text-align: center;
+    font-size: 18px;
+    display: inline;
+    position: relative;
+    width: 300px;
+    background-color: #FBB4A5;
+   cursor: pointer;
+}
+#YourDropdown{
+    display: block;
+    margin: auto;
+    margin-top: 1rem;
+}
+#OutputDropdown{
+    display: block;
+    margin: auto;
+    margin-top: 1rem;
+}
+#yourinput{
+    display: block;
+    margin: 0 auto;
+    height: 20px;
+}
+#outputdisplay{
+    display: flex;
+    display: block;
+    margin: 0 auto;
+    width: 200px;
+    border: 2px black solid;
+    justify-content: center;
+}
+#outputdisplayer{
+    height: 20px;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+}
+#outputimg,#yourimg{
+    display: block;
+    margin:0 auto;
+}
+#messagedisplay{
+    align-self: flex-start;
+}
+
+.dropdownclass{
+    margin: auto;
+}
