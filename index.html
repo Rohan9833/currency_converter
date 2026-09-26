@@ -3,58 +3,109 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <meta name="theme-color" content="#0b1020" />
+    <title>CurrencyFlow — Currency Converter</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
     <link href="style.css" rel="stylesheet" />
   </head>
+
   <body>
-    <div id="outerdiv">
-      <div id="container">
-        <div class="displays">
-          <div id="yourDiv" class="dropdownclass">
-            <div class="from">
-              <select id="YourDropdown" class="dropdown"></select>
-              <br />
-              <img src="https://flagsapi.com/US/flat/64.png" id="yourimg" />
-              <input
-                placeholder="Enter Amount"
-                type="number"
-                id="yourinput"
-                min="0"
-              />
-              <br /><br />
-              <p id="details">
-                Lorem ipsum dolor oribus dolorem cupiditate morcitationem
-                tempore quae illo quia, autem tenetur praesentium esse voluptas
-                dicta nostrum in possimus!
-              </p>
+    <main class="app-shell">
+      <div class="ambient ambient-one"></div>
+      <div class="ambient ambient-two"></div>
+
+      <section class="converter-card" aria-label="Currency converter">
+        <header class="app-header">
+          <div class="brand">
+            <div class="brand-mark" aria-hidden="true">
+              <span>$</span>
+              <span>↗</span>
+            </div>
+            <div>
+              <p class="eyebrow">CURRENCYFLOW</p>
+              <h1>Currency converter</h1>
             </div>
           </div>
-
-          <div id="outputDiv" class="dropdownclass">
-            <div class="to">
-              <select id="OutputDropdown" class="dropdown"></select>
-            </div>
-
-            <br />
-
-            <img src="https://flagsapi.com/IN/flat/64.png" id="outputimg" />
-
-            <div id="outputdisplay">
-              <p id="outputdisplayer"></p>
-            </div>
-            <br /><br />
-            <p id="details">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-              Exercitationem omnis illum totam doloremque, illo quidem dolores
-              et adipisci, optio officia? Repudiandae.
-            </p>
+          <div class="live-badge">
+            <span class="live-dot"></span>
+            Live rates
           </div>
+        </header>
+
+        <div class="intro">
+          <h2>Convert money, <span>without the guesswork.</span></h2>
+          <p>Choose your currencies, enter an amount, and get the latest exchange rate.</p>
         </div>
 
-        <br />
-        <button id="convert">Get Exchange Rate</button>
-      </div>
-    </div>
+        <div class="converter-grid">
+          <article class="currency-panel">
+            <div class="panel-label">
+              <span>FROM</span>
+              <span class="currency-code" id="fromCodeLabel">USD</span>
+            </div>
+
+            <div class="select-wrap">
+              <img src="https://flagsapi.com/US/flat/64.png" id="yourimg" alt="US flag" />
+              <select id="YourDropdown" class="dropdown" aria-label="Currency to convert from"></select>
+              <span class="select-chevron">⌄</span>
+            </div>
+
+            <label class="amount-field">
+              <span>Amount</span>
+              <input placeholder="0.00" type="number" id="yourinput" min="0" step="any" inputmode="decimal" />
+            </label>
+
+            <p class="currency-description" id="fromDetails">United States Dollar</p>
+          </article>
+
+          <button id="swap" class="swap-button" type="button" aria-label="Swap currencies" title="Swap currencies">
+            <span>⇄</span>
+          </button>
+
+          <article class="currency-panel result-panel">
+            <div class="panel-label">
+              <span>TO</span>
+              <span class="currency-code" id="toCodeLabel">INR</span>
+            </div>
+
+            <div class="select-wrap">
+              <img src="https://flagsapi.com/IN/flat/64.png" id="outputimg" alt="India flag" />
+              <select id="OutputDropdown" class="dropdown" aria-label="Currency to convert to"></select>
+              <span class="select-chevron">⌄</span>
+            </div>
+
+            <div class="result-field">
+              <span>Converted amount</span>
+              <strong id="outputdisplayer">—</strong>
+            </div>
+
+            <p class="currency-description" id="toDetails">Indian Rupee</p>
+          </article>
+        </div>
+
+        <div class="rate-strip">
+          <div class="rate-icon">↗</div>
+          <div>
+            <span class="rate-label">Exchange rate</span>
+            <strong id="rateDisplay">1 USD = — INR</strong>
+          </div>
+          <span class="rate-status" id="rateStatus">Ready</span>
+        </div>
+
+        <button id="convert" class="convert-button" type="button">
+          <span>Convert currency</span>
+          <span class="button-arrow">→</span>
+        </button>
+
+        <footer class="card-footer">
+          <span>Rates provided by ExchangeRate-API</span>
+          <span>•</span>
+          <span>Updated when you convert</span>
+        </footer>
+      </section>
+    </main>
 
     <script src="code.js"></script>
     <script src="script.js"></script>
